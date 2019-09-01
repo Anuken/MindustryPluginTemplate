@@ -11,7 +11,7 @@ Every main plugin class must extend `Plugin`. Make sure that `plugin.json` point
 
 Please note that the plugin system is in **early alpha**, and is subject to major changes.
 
-### Building a Jar *(without dependencies)*
+### Building a Jar
 
 `gradlew jar` / `./gradlew jar`
 

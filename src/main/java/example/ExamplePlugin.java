@@ -15,7 +15,7 @@ public class ExamplePlugin extends Plugin{
     public ExamplePlugin(){
         //listen for a block selection event
         Events.on(BuildSelectEvent.class, event -> {
-            if(!event.breaking && event.builder.buildRequest().block == Blocks.thoriumReactor && event.builder instanceof Player){
+            if(!event.breaking && event.builder != null && event.builder.buildRequest() != null && event.builder.buildRequest().block == Blocks.thoriumReactor && event.builder instanceof Player){
                 //send a message to everyone saying that this player has begun building a reactor
                 Call.sendMessage("[scarlet]ALERT![] " + ((Player)event.builder).name + " has begun building a reactor at " + event.tile.x + ", " + event.tile.y);
             }
