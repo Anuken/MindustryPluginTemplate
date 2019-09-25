@@ -10,8 +10,8 @@ repositories{
 }
 
 ext{
-    //the build number that this plugin is made for; v93 would be 'build 93'.
-    mindustryVersion = 'v93'
+    //the build number that this plugin is made for
+    mindustryVersion = 'v95'
 }
 
 dependencies{
