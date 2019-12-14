@@ -11,12 +11,11 @@ repositories{
 
 ext{
     //the build number that this plugin is made for
-    //TODO build 100 broke builds, so this is currently a patch commit.
-    mindustryVersion = '496677725e'
+    mindustryVersion = 'v101'
 }
 
 dependencies{
-    compileOnly "com.github.Anuken.Arc:arc-core:v100"
+    compileOnly "com.github.Anuken.Arc:arc-core:$mindustryVersion"
     compileOnly "com.github.Anuken.Mindustry:core:$mindustryVersion"
 }
 
