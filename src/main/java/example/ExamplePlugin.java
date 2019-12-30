@@ -1,13 +1,13 @@
 package example;
 
-import io.anuke.arc.*;
-import io.anuke.arc.util.*;
-import io.anuke.mindustry.*;
-import io.anuke.mindustry.content.*;
-import io.anuke.mindustry.entities.type.*;
-import io.anuke.mindustry.game.EventType.*;
-import io.anuke.mindustry.gen.*;
-import io.anuke.mindustry.plugin.Plugin;
+import arc.*;
+import arc.util.*;
+import mindustry.*;
+import mindustry.content.*;
+import mindustry.entities.type.*;
+import mindustry.game.EventType.*;
+import mindustry.gen.*;
+import mindustry.plugin.Plugin;
 
 public class ExamplePlugin extends Plugin{
 
