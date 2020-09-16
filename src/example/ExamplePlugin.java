@@ -4,10 +4,9 @@ import arc.*;
 import arc.util.*;
 import mindustry.*;
 import mindustry.content.*;
-import mindustry.entities.type.*;
 import mindustry.game.EventType.*;
 import mindustry.gen.*;
-import mindustry.plugin.Plugin;
+import mindustry.mod.*;
 
 public class ExamplePlugin extends Plugin{
 
@@ -15,9 +14,12 @@ public class ExamplePlugin extends Plugin{
     public ExamplePlugin(){
         //listen for a block selection event
         Events.on(BuildSelectEvent.class, event -> {
-            if(!event.breaking && event.builder != null && event.builder.buildRequest() != null && event.builder.buildRequest().block == Blocks.thoriumReactor && event.builder instanceof Player){
+            if(!event.breaking && event.builder != null && event.builder.buildPlan() != null && event.builder.buildPlan().block == Blocks.thoriumReactor && event.builder.isPlayer()){
+                //player is the unit controller
+                Player player = (Player)event.builder.controller();
+
                 //send a message to everyone saying that this player has begun building a reactor
-                Call.sendMessage("[scarlet]ALERT![] " + ((Player)event.builder).name + " has begun building a reactor at " + event.tile.x + ", " + event.tile.y);
+                Call.sendMessage("[scarlet]ALERT![] " + player.name + " has begun building a reactor at " + event.tile.x + ", " + event.tile.y);
             }
         });
     }
@@ -49,7 +51,7 @@ public class ExamplePlugin extends Plugin{
         //register a whisper command which can be used to send other players messages
         handler.<Player>register("whisper", "<player> <text...>", "Whisper text to another player.", (args, player) -> {
             //find player by name
-            Player other = Vars.playerGroup.find(p -> p.name.equalsIgnoreCase(args[0]));
+            Player other = Groups.player.find(p -> p.name.equalsIgnoreCase(args[0]));
 
             //give error message with scarlet-colored text if player isn't found
             if(other == null){
