@@ -32,7 +32,7 @@ public class ExamplePlugin extends Plugin{
                 for(int y = 0; y < Vars.world.height(); y++){
                     //loop through and log all found reactors
                     if(Vars.world.tile(x, y).block() == Blocks.thoriumReactor){
-                        Log.info("Reactor at {0}, {1}", x, y);
+                        Log.info("Reactor at @, @", x, y);
                     }
                 }
             }

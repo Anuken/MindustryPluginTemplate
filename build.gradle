@@ -13,7 +13,7 @@ repositories{
 
 ext{
     //the build number that this plugin is made for
-    mindustryVersion = 'v105'
+    mindustryVersion = 'v111'
 }
 
 dependencies{
