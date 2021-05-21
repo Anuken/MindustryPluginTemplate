@@ -6,6 +6,9 @@ sourceCompatibility = 1.8
 
 sourceSets.main.java.srcDirs = ["src"]
 
+compileJava.options.encoding = "UTF-8"
+compileTestJava.options.encoding = "UTF-8"
+
 repositories{
     mavenCentral()
     maven{ url 'https://www.jitpack.io' }
@@ -13,7 +16,7 @@ repositories{
 
 ext{
     //the build number that this plugin is made for
-    mindustryVersion = 'v120'
+    mindustryVersion = 'v126.2'
 }
 
 dependencies{
