@@ -48,7 +48,8 @@ public class ExamplePlugin extends Plugin{
             for(int x = 0; x < Vars.world.width(); x++){
                 for(int y = 0; y < Vars.world.height(); y++){
                     //loop through and log all found reactors
-                    if(Vars.world.tile(x, y).block() == Blocks.thoriumReactor){
+                    //make sure to only log reactor centers
+                    if(Vars.world.tile(x, y).block() == Blocks.thoriumReactor && Vars.world.tile(x, y).isCenter()){
                         Log.info("Reactor at @, @", x, y);
                     }
                 }
