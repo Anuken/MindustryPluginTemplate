@@ -16,7 +16,7 @@ repositories{
 
 ext{
     //the build number that this plugin is made for
-    mindustryVersion = 'v144.2'
+    mindustryVersion = 'v144.3'
     jabelVersion = "93fde537c7"
 }
 
